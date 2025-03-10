@@ -7,6 +7,7 @@ function Modal({ character, onClose }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // request nothing if there's no character props
     if (!character) return;
 
     setLoading(true);
@@ -22,13 +23,14 @@ function Modal({ character, onClose }) {
       });
   }, [character]);
 
+  // Render nothing if there's no character props
   if (!character) return null;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         {loading ? (
-          <div className="spinner"></div>
+          <div className="spinner" />
         ) : (
           <div>
             <h2>{charDetails.name}</h2>

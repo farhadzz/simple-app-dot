@@ -1,4 +1,4 @@
-const Card = ({ name, height, mass, gender, index, onClick }) => {
+const Card = ({ name, index, onClick }) => {
   return (
     <div key={index} className="card" onClick={onClick}>
       <h2>{name}</h2>

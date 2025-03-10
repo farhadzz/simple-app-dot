@@ -16,12 +16,13 @@ function Login({ setAuth }) {
       (user) => user.username === username && user.password === password
     );
 
+    // If user exist, it will set auth to true and navigate to home
     if (user) {
       localStorage.setItem("auth", "true");
       setAuth(true);
       navigate("/");
     } else {
-      alert("Email not registered");
+      alert("Invalid Credentials");
     }
   };
 
@@ -68,7 +69,11 @@ function Login({ setAuth }) {
           <p>
             Already have an account?{" "}
             <span
-              onClick={() => setIsRegister(false)}
+              onClick={() => {
+                setIsRegister(false);
+                setUsername("");
+                setPassword("");
+              }}
               style={{ cursor: "pointer", color: "#ffd700" }}
             >
               Login here
@@ -81,7 +86,11 @@ function Login({ setAuth }) {
           <p>
             Don't have an account?{" "}
             <span
-              onClick={() => setIsRegister(true)}
+              onClick={() => {
+                setIsRegister(true);
+                setUsername("");
+                setPassword("");
+              }}
               style={{ cursor: "pointer", color: "#ffd700" }}
             >
               Register here

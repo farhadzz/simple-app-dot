@@ -6,6 +6,7 @@ function Navbar({ setAuth }) {
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    // Only remove auth to preserve registered user
     localStorage.removeItem("auth"); // Clear authentication
     setAuth(false); // Update authentication state
     navigate("/login"); // Redirect to login page
