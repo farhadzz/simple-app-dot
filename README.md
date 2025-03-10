@@ -35,13 +35,14 @@ The Star Wars Character Explorer is a web application that allows users to brows
 
 - After starting the development server, open your browser and navigate to `http://localhost:3000`.
 - Use the register page to register account.
-- Use the login page to authenticate (No Validation for User and Password. You can create account without following email format)
+- Use the login page to authenticate (No Validation for User and Password. You can create account without any rules)
 - Browse the list of Star Wars characters and click on any character to view detailed information.
 
 ## Features
 
 - **User Authentication**: Login and logout functionality.
 - **Character List**: Browse a paginated list of Star Wars characters.
+- **Character Search**: Look for the Star Wars characters using search feature.
 - **Character Details**: View detailed information about each character.
 - **Responsive Design**: Works seamlessly on desktop and mobile devices.
 
